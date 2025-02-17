@@ -96,8 +96,6 @@ proc getMapsWithMinimalPlays(mode: Mode): seq[Map] =
     else:
         mapPool.sz.mapIt(Map(it))
 
-    echo "Here"
-
     #let mapsOfMode: seq[Map] = gameCounts.pairs.toSeq.filterIt(it[0].mode == string(mode)).toSeq
     let validMapPlays = mapPlayCounts.pairs.toSeq.filterIt(mapsOfMode.contains(it[0])).toTable()
 
